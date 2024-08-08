@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: quota-ns-test1
+  namespace: test1
+spec:
+  hard:
+    cpu: "0.6"
+    memory: 550Mi
+    limits.cpu: 2
+    limits.memory: 1Gi
+    pods: 5
+    count/services: 5
+    count/deployments.apps: 3
+    count/replicasets.apps: 4                           

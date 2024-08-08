@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: test1
+  labels:
+    app: senior
+  name: senior
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: senior
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: senior
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+        resources:
+          requests:
+            cpu: "0.1"
+            memory: 30Mi
+          limits: 
+            cpu: "0.1"
+            memory: 80Mi

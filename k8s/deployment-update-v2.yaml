@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: update
+  name: update
+  namespace: update
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: update
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: update
+    spec:
+      containers:
+      - image: httpd:2.4.56
+        name: httpd
+        
