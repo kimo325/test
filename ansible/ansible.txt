@@ -1,0 +1,22 @@
+on master node:
+
+1 static net
+2 sudo user       xxx  ALL=(ALL)       NOPASSWD:ALL  	etc/sudoers
+3 create pub/private ssh
+4 copy pub  to hosts
+  (ssh trust key)
+  (password less)
+5 python3
+6 install ansible
+7 etc/hosts  to add node1 node2 in it
+
+8 ssh-copy-id xxx@node1  
+  ssh-copy-id xxx@node2
+
+
+on nodes
+
+1 static net
+2 sudo user      xxx ALL=(ALL)      NOPASSWD:ALL      etc/sudoers
+3 ssh service
+4 python3

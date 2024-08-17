@@ -1,0 +1,34 @@
+[defaults]
+remote_user = remote
+forks = 5
+inventory =  managed-hosts
+host_key_checking = false
+
+[privilege_escalation]
+become = true
+become_method = sudo
+become_user = root
+become_ask_pass = false
+
+---------------------------------------------------------
+
+**to test :::  ansible-inventory --list
+==========================================================
+
+ad-hoc
+
+****ansible-doc- file /user /group/package             NOTE : remove : and space REPLACED  =
+
+-------
+**ansible      group            -m    module   -a   action
+          (in inventory)          (shell)        (cmd + option)
+                -----------------------------------
+*to delete any action :  state = absent
+                -----------------------------------
+* to apply action for all group in enventory
+* type (all) replaced (prod)
+                ---------------------
+* to remove host from group
+* type group ! hostname
+
+
