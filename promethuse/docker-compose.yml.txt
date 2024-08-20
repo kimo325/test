@@ -16,3 +16,5 @@ services:
       - /:/rootfs:ro
     ports:
       - "9100:9100"
+
+* docker compose up -d docker-compose.yml
