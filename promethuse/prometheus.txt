@@ -10,4 +10,7 @@ how to setup prometheus : docker image
   . docker pull prom/node-exporter
   . docker pull gravana/gravana
 
+* extract configration file from prometheus server 
+* create configration file prometheus on my machine and edit on it and mount it in prometheus container as vol
+* in location :/etc/prometheus/prometheus.yml
  
