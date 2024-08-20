@@ -1,0 +1,13 @@
+* prometheus -----------  monitoring sw -------------------- port 9090
+* node exporter -------- tool to coleact data and sent it to prometheus ----------------------- port 9100
+* gravana --------------  data visualizalion --------------- port 3000
+
+how to setup prometheus : docker image
+                        : setup service
+
+* downloade prometheus as container image
+  . docker pull prom/promethues
+  . docker pull prom/node-exporter
+  . docker pull gravana/gravana
+
+ 
