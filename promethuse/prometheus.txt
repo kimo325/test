@@ -13,9 +13,19 @@ how to setup prometheus : docker image
 * extract configration file from prometheus server 
 * create configration file prometheus on my machine and edit on it and mount it in prometheus container as vol
 * in location :/etc/prometheus/prometheus.yml
- 
+ ---------------------------------------------------------------------------------------------------------------------------------------------
 docker run -d --name prometheus-server --network prometheus_default -p 9090:9090 --mount type=bind,source=$PWD/prometheus.yml,target=/etc/prometheus/prometheus.yml prom/prometheus
 
 if make any change just : docker restart prom-server
 
 docker run -d --name grafana -p 3000:3000 --network prometheus_default --volume grafana:/var/lib/grafana grafana/grafana
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+how to integrate grafana with prometheus 
+-----------------------------------------
+
+ip machine:3000 : default user & pass  admin
+click data source from web interface . select prometheus
+name: ???? . connection: ip/port for prometheus
+next building a dashboard
+build dashboard : import dashboard from grafana . go to grafana.com/dashboards and select
