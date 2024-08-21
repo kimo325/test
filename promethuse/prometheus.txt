@@ -15,3 +15,7 @@ how to setup prometheus : docker image
 * in location :/etc/prometheus/prometheus.yml
  
 docker run -d --name prometheus-server --network prometheus_default -p 9090:9090 --mount type=bind,source=$PWD/prometheus.yml,target=/etc/prometheus/prometheus.yml prom/prometheus
+
+if make any change just : docker restart prom-server
+
+docker run -d --name grafana -p 3000:3000 --network prometheus_default --volume grafana:/var/lib/grafana grafana/grafana
