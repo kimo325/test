@@ -14,3 +14,4 @@ how to setup prometheus : docker image
 * create configration file prometheus on my machine and edit on it and mount it in prometheus container as vol
 * in location :/etc/prometheus/prometheus.yml
  
+docker run -d --name prometheus-server --network prometheus_default -p 9090:9090 --mount type=bind,source=$PWD/prometheus.yml,target=/etc/prometheus/prometheus.yml prom/prometheus
